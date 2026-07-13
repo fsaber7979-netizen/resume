@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رزومه فاطمه صابر | کارشناس کاردرمانی</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="رزومه تخصصی فاطمه صابر، کارشناس کاردرمانی، پژوهشگر و مترجم بالینی با تمرکز بر اختلالات اتیسم و پردازش حسی.">
+  <meta name="keywords" content="فاطمه صابر, کاردرمانی, کاردرمانگر, اتیسم, پردازش حسی, توانبخشی, رزومه پزشکی">
+  <meta name="author" content="Fatemeh Saber">
+  
+  <!-- OpenGraph Card for Social Sharing -->
+  <meta property="og:title" content="رزومه فاطمه صابر | کارشناس کاردرمانی">
+  <meta property="og:description" content="کاردرمانگر بالینی و پژوهشگر با تمرکز بر ارزیابی و مداخلات تخصصی در اختلالات طیف اتیسم و پردازش حسی.">
+  <meta property="og:image" content="1000032508.jpg">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="fa_IR">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Vazirmatn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- html2pdf.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <!-- Tailwind Configuration for customized medical theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'Tahoma', 'sans-serif'],
+          },
+          colors: {
+            medical: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* Keyframe Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Glassmorphism Classes */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Scroll Reveal Initial States */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Timeline lines for Experience */
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      right: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e2e8f0;
+      z-index: 0;
+    }
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    /* Custom print optimizations for html2pdf to look pixel-perfect */
+    .pdf-mode {
+      background: #ffffff !important;
+      color: #000000 !important;
+      padding: 15px !important;
+    }
+    .pdf-mode .no-print {
+      display: none !important;
+    }
+    .pdf-mode .glass-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "فاطمه صابر",
+      "jobTitle": "کارشناس کاردرمانی",
+      "telephone": "+989227997907",
+      "email": "f.saber.7979@gmail.com",
+      "url": "https://fatemehsaber.github.io/resume",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "دانشگاه علوم پزشکی شهید بهشتی"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/fatemeh-saber-0944a8231"
+      ]
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-tr from-slate-50 via-sky-50/30 to-blue-50/50 font-sans text-slate-800 antialiased min-h-screen selection:bg-medical-200 selection:text-medical-800">
+
+  <!-- Navigation Bar (Floating/Sticky) -->
+  <nav class="fixed top-4 left-4 right-4 z-50 glass-nav shadow-lg rounded-2xl border border-slate-700/30 px-6 py-3 transition-all duration-300 no-print">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-medical-500 flex items-center justify-center text-white font-bold text-sm">ف‌ص</div>
+        <span class="text-white font-semibold text-sm sm:text-base hidden sm:inline">فاطمه صابر | کاردرمانگر</span>
+      </div>
+      
+      <!-- Quick Navigation links -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="#about" class="text-slate-300 hover:text-white transition text-xs sm:text-sm font-medium">درباره من</a>
+        <a href="#experience" class="text-slate-300 hover:text-white transition text-xs sm:text-sm font-medium">تجربه بالینی</a>
+        <a href="#publications" class="text-slate-300 hover:text-white transition text-xs sm:text-sm font-medium">پژوهش‌ها</a>
+        
+        <!-- Premium Action Button -->
+        <button onclick="downloadPDF()" class="bg-gradient-to-r from-medical-500 to-medical-600 hover:from-medical-600 hover:to-medical-700 text-white text-xs sm:text-sm px-3 py-2 rounded-xl font-bold shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <span class="hidden md:inline">دانلود نسخه PDF</span>
+          <span class="md:hidden">PDF</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PDF Main Wrapper (Allows specific layout styling during PDF rendering) -->
+  <div id="resume-container" class="max-w-5xl mx-auto px-4 pt-28 pb-16 space-y-12 sm:space-y-16">
+
+    <!-- HERO SECTION -->
+    <header id="hero" class="relative overflow-hidden rounded-3xl glass-card p-6 sm:p-12 shadow-2xl border border-white/40 flex flex-col md:flex-row gap-8 items-center text-right">
+      
+      <!-- Decorative background blur elements -->
+      <div class="absolute -top-10 -left-10 w-40 h-40 bg-sky-200/40 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-200/40 rounded-full blur-3xl -z-10"></div>
+
+      <!-- Profile Photo Wrapper with Elegant Border & Shadows -->
+      <div class="relative group animate-float shrink-0 z-10">
+        <div class="absolute inset-0 bg-gradient-to-tr from-medical-500 to-cyan-400 rounded-full blur-lg opacity-40 group-hover:opacity-60 transition duration-500"></div>
+        <div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full p-2 bg-white/90 shadow-xl border border-sky-100 flex items-center justify-center">
+          <img src="1000032508.jpg" alt="فاطمه صابر" class="w-full h-full rounded-full object-cover object-center shadow-inner" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400';">
+        </div>
+        <span class="absolute bottom-2 right-4 bg-emerald-500 text-white text-xs px-2.5 py-1 rounded-full border-2 border-white font-bold flex items-center gap-1 shadow-md">
+          <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+          آماده ارزیابی و درمان
+        </span>
+      </div>
+
+      <!-- Information & Actions -->
+      <div class="flex-1 space-y-4">
+        <div class="space-y-2">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">فاطمه صابر</h1>
+          <p class="text-xl sm:text-2xl font-bold text-medical-600">کارشناس کاردرمانی</p>
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-medical-50 text-medical-700 text-sm font-bold rounded-lg border border-medical-100">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            شماره نظام پزشکی: ک.د ۴۰۵۴
+          </div>
+        </div>
+
+        <!-- Bio Quick Points -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600 font-medium">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-medical-500"></span>
+            تمرکز بر اختلالات طیف اتیسم کودکان
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
+            پژوهشگر و مترجم بالینی
+          </div>
+        </div>
+
+        <!-- Contact Buttons & Social Links -->
+        <div class="flex flex-wrap gap-2.5 pt-4 no-print">
+          <!-- Phone Button -->
+          <a href="tel:09227997907" class="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-xl border border-slate-200 shadow-sm hover:shadow transition duration-200 text-sm font-semibold">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            09227997907
+          </a>
+          
+          <!-- Email Button -->
+          <a href="mailto:f.saber.7979@gmail.com" class="flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-xl border border-slate-200 shadow-sm hover:shadow transition duration-200 text-sm font-semibold">
+            <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            f.saber.7979@gmail.com
+          </a>
+
+          <!-- LinkedIn Button -->
+          <a href="https://linkedin.com/in/fatemeh-saber-0944a8231" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#0077b5] hover:bg-[#006699] text-white px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition duration-200 text-sm font-semibold">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            لینکدین
+          </a>
+
+          <!-- Location Indicator -->
+          <span class="flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2.5 rounded-xl text-sm font-semibold">
+            <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            تهران، ایران
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: SUMMARY -->
+    <section id="about" class="reveal glass-card rounded-2xl p-6 sm:p-8 shadow-lg border border-white/40 space-y-4">
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+        <div class="p-2 bg-medical-100 text-medical-600 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">خلاصه تخصصی</h2>
+      </div>
+      <p class="text-slate-600 leading-relaxed text-sm sm:text-base text-justify font-medium">
+        کاردرمانگر بالینی و پژوهشگر با تمرکز بر ارزیابی و مداخلات تخصصی در اختلالات طیف اتیسم، پردازش حسی و بیماری‌های جسمی-حرکتی. مسلط به طراحی پروتکل‌های درمانی مبتنی بر شواهد (EBP) و توانمند در ادغام رویکردهای بالینی با پژوهش‌های آکادمیک. دارای سابقه تالیف و ترجمه کتب مرجع دانشگاهی و تولید محتوای علمی-پزشکی در سطح بین‌المللی با هدف ارتقای کیفیت مداخلات توانبخشی و افزایش سطح آگاهی عمومی.
+      </p>
+    </section>
+
+    <!-- SECTION 2: WORK EXPERIENCE -->
+    <section id="experience" class="reveal glass-card rounded-2xl p-6 sm:p-8 shadow-lg border border-white/40 space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+        <div class="p-2 bg-cyan-100 text-cyan-600 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">سوابق بالینی و حرفه‌ای</h2>
+      </div>
+
+      <!-- Timeline Wrapper -->
+      <div class="space-y-6 relative mr-4 sm:mr-8">
+        
+        <!-- Job 1 -->
+        <div class="relative timeline-item pr-8 pb-4">
+          <!-- Timeline Marker Circle -->
+          <div class="absolute right-0 top-1.5 w-8 h-8 rounded-full bg-medical-100 border-2 border-medical-500 flex items-center justify-center z-10">
+            <span class="w-3 h-3 rounded-full bg-medical-500"></span>
+          </div>
+          <!-- Card Content -->
+          <div class="glass-card hover:bg-slate-50/80 p-5 rounded-xl border border-slate-200/60 shadow-sm transition duration-300">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">بیمارستان روانپزشکی روزبه</h3>
+                <p class="text-sm font-bold text-medical-600">کاردرمانی اتیسم کودکان</p>
+              </div>
+              <span class="px-3 py-1 text-xs font-bold text-medical-700 bg-medical-50 rounded-full border border-medical-200">مهر ۱۴۰۳ - تاکنون</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed text-justify">
+              ارزیابی بالینی و اجرای مداخلات کاردرمانی تخصصی برای مراجعین کودک مبتلا به اختلال طیف اتیسم.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="relative timeline-item pr-8 pb-4">
+          <!-- Timeline Marker Circle -->
+          <div class="absolute right-0 top-1.5 w-8 h-8 rounded-full bg-cyan-100 border-2 border-cyan-500 flex items-center justify-center z-10">
+            <span class="w-3 h-3 rounded-full bg-cyan-500"></span>
+          </div>
+          <!-- Card Content -->
+          <div class="glass-card hover:bg-slate-50/80 p-5 rounded-xl border border-slate-200/60 shadow-sm transition duration-300">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">کلینیک گفتاردرمانی و کاردرمانی رونیا</h3>
+                <p class="text-sm font-bold text-cyan-600">کاردرمانگر</p>
+              </div>
+              <span class="px-3 py-1 text-xs font-bold text-cyan-700 bg-cyan-50 rounded-full border border-cyan-200">اردیبهشت ۱۴۰۳ - تاکنون</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed text-justify">
+              ارزیابی جامع و تدوین برنامه‌های درمانی فردی (IEP) برای مراجعین کودک و بزرگسال در حوزه‌های توانبخشی جسمی و ذهنی.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="relative timeline-item pr-8 pb-4">
+          <!-- Timeline Marker Circle -->
+          <div class="absolute right-0 top-1.5 w-8 h-8 rounded-full bg-indigo-100 border-2 border-indigo-500 flex items-center justify-center z-10">
+            <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
+          </div>
+          <!-- Card Content -->
+          <div class="glass-card hover:bg-slate-50/80 p-5 rounded-xl border border-slate-200/60 shadow-sm transition duration-300">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Student vs Pandemics (Harvard affiliated)</h3>
+                <p class="text-sm font-bold text-indigo-600">Medical Content Creator</p>
+              </div>
+              <span class="px-3 py-1 text-xs font-bold text-indigo-700 bg-indigo-50 rounded-full border border-indigo-200">مرداد ۱۴۰۰ - تاکنون</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed text-justify">
+              تولید محتوای تخصصی و علمی برای استارتاپ آموزشی بین‌المللی در حوزه مراقبت‌های سلامتی و پزشکی مبتنی بر شواهد.
+            </p>
+          </div>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="relative timeline-item pr-8">
+          <!-- Timeline Marker Circle -->
+          <div class="absolute right-0 top-1.5 w-8 h-8 rounded-full bg-slate-100 border-2 border-slate-500 flex items-center justify-center z-10">
+            <span class="w-3 h-3 rounded-full bg-slate-500"></span>
+          </div>
+          <!-- Card Content -->
+          <div class="glass-card hover:bg-slate-50/80 p-5 rounded-xl border border-slate-200/60 shadow-sm transition duration-300">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Commercial Companies & Health Platforms</h3>
+                <p class="text-sm font-bold text-slate-600">Digital Medical Content Creator</p>
+              </div>
+              <span class="px-3 py-1 text-xs font-bold text-slate-700 bg-slate-100 rounded-full border border-slate-200">۱۳۹۹ - تاکنون</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed text-justify">
+              طراحی محتوای سلامت‌محور، علمی و تخصصی توانبخشی و کاردرمانی مبتنی بر شواهد علمی معتبر جهت بهبود ارتقای بهداشت عمومی جامعه.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: RESEARCH & PUBLICATIONS -->
+    <section id="publications" class="reveal glass-card rounded-2xl p-6 sm:p-8 shadow-lg border border-white/40 space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+        <div class="p-2 bg-sky-100 text-sky-600 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">پژوهش‌ها و تالیفات</h2>
+      </div>
+
+      <!-- Journal Article Card -->
+      <div class="p-5 rounded-2xl border border-medical-100 bg-medical-50/40 space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-medical-800 bg-medical-100 px-2.5 py-1 rounded-md uppercase">مقاله علمی (Journal Article)</span>
+          <span class="text-sm font-bold text-slate-500">2026</span>
+        </div>
+        <h4 class="text-base sm:text-lg font-bold text-slate-900 text-left leading-snug" dir="ltr">
+          The relationship between educational status, social responsiveness, and sensory processing in 7 to 13 year-old elementary school students.
+        </h4>
+        <p class="text-sm text-slate-600 text-left" dir="ltr">
+          Saber, F., Pashmdarfard, M., & Mirzakhani, N.
+        </p>
+        <p class="text-xs text-slate-500 text-left" dir="ltr">
+          Journal of Occupational Therapy, Schools, & Early Intervention | 19(1), 78–90
+        </p>
+        <div class="pt-2">
+          <a href="https://doi.org/10.1080/19411243.2025.2479725" target="_blank" class="inline-flex items-center gap-1 text-xs font-bold text-medical-600 hover:text-medical-700 underline underline-offset-4" dir="ltr">
+            DOI: https://doi.org/10.1080/19411243.2025.2479725
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Published Books Grid -->
+      <div class="space-y-3">
+        <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+          <span class="w-1.5 h-4 bg-cyan-500 rounded-full"></span>
+          کتب منتشرشده و ترجمه‌ها
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Book 1 -->
+          <div class="flex gap-4 p-4 rounded-xl border border-slate-200/60 hover:bg-slate-50/50 transition duration-300">
+            <div class="w-10 h-10 bg-rose-50 text-rose-600 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">دستنامه بالینی پردازش حسی</h4>
+              <p class="text-xs text-slate-500 mt-1">ترجمه و راهنمای بالینی تخصصی</p>
+            </div>
+          </div>
+          <!-- Book 2 -->
+          <div class="flex gap-4 p-4 rounded-xl border border-slate-200/60 hover:bg-slate-50/50 transition duration-300">
+            <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">عملکردهای اجرایی و سازماندهی رفتاری مغز</h4>
+              <p class="text-xs text-slate-500 mt-1">تالیف و ترجمه مرجع تخصصی دانشگاهی</p>
+            </div>
+          </div>
+          <!-- Book 3 -->
+          <div class="flex gap-4 p-4 rounded-xl border border-slate-200/60 hover:bg-slate-50/50 transition duration-300">
+            <div class="w-10 h-10 bg-teal-50 text-teal-600 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">هوش مصنوعی برای تشخیص اختلالات طیف اتیسم</h4>
+              <p class="text-xs text-slate-500 mt-1">بررسی متدهای نوین تشخیصی مبتنی بر فناوری</p>
+            </div>
+          </div>
+          <!-- Book 4 -->
+          <div class="flex gap-4 p-4 rounded-xl border border-slate-200/60 hover:bg-slate-50/50 transition duration-300">
+            <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">بازی درمانی و هنرهای بیانی</h4>
+              <p class="text-xs text-slate-500 mt-1">تکنیک‌های درمانی غیردارویی کودکان</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: EDUCATION -->
+    <section id="education" class="reveal glass-card rounded-2xl p-6 sm:p-8 shadow-lg border border-white/40 space-y-4">
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+        <div class="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-5.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20"></path></svg>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">تحصیلات آکادمیک</h2>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 p-5 rounded-xl border border-slate-200/60 hover:bg-slate-50/50 transition duration-300">
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">دانشگاه علوم پزشکی شهید بهشتی</h3>
+          <p class="text-sm text-medical-600 font-bold mt-1">کارشناسی کاردرمانی</p>
+        </div>
+        <span class="px-4 py-1.5 text-xs font-bold text-slate-700 bg-slate-100 rounded-full border border-slate-200">۱۳۹۹ - ۱۴۰۳</span>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HONORS -->
+    <section id="honors" class="reveal glass-card rounded-2xl p-6 sm:p-8 shadow-lg border border-white/40 space-y-4">
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">افتخارات و ارائه‌ها</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+        <!-- Honor 1 -->
+        <div class="flex items-start gap-3 p-4 rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow transition duration-200">
+          <div class="p-1.5 bg-amber-50 text-amber-500 rounded-md shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">ارائه سخنرانی در کنگره بین‌المللی کاردرمانی</h4>
+            <p class="text-xs font-bold text-slate-500 mt-1">سال ۱۴۰۴</p>
+          </div>
+        </div>
+        <!-- Honor 2 -->
+        <div class="flex items-start gap-3 p-4 rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow transition duration-200">
+          <div class="p-1.5 bg-amber-50 text-amber-500 rounded-md shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">ارائه سخنرانی در اولین کنگره اتیسم</h4>
+            <p class="text-xs font-bold text-slate-500 mt-1">سال ۱۴۰۴</p>
+          </div>
+        </div>
+        <!-- Honor 3 -->
+        <div class="flex items-start gap-3 p-4 rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow transition duration-200">
+          <div class="p-1.5 bg-amber-50 text-amber-500 rounded-md shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">ارائه پوستر در کنگره ملی کاردرمانی</h4>
+            <p class="text-xs font-bold text-slate-500 mt-1">سال ۱۴۰۳</p>
+          </div>
+        </div>
+        <!-- Honor 4 -->
+        <div class="flex items-start gap-3 p-4 rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow transition duration-200">
+          <div class="p-1.5 bg-amber-50 text-amber-500 rounded-md shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">ارائه سخنرانی در کنگره ملی کاردرمانی</h4>
+            <p class="text-xs font-bold text-slate-500 mt-1">سال ۱۴۰۲</p>
+          </div>
+        </div>
+        <!-- Honor 5 -->
+        <div class="flex items-start gap-3 p-4 rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow transition duration-200 md:col-span-2">
+          <div class="p-1.5 bg-amber-100 text-amber-600 rounded-md shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm0 13H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2h-8z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">کسب مدال برنز المپیاد کشوری دانشجویی کارآفرینی</h4>
+            <p class="text-xs font-bold text-slate-500 mt-1">المپیاد علمی دانشجویان علوم پزشکی کشور</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: SKILLS -->
+    <section id="skills" class="reveal glass-card rounded-2xl p-6 sm:p-8 shadow-lg border border-white/40 space-y-4">
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+        <div class="p-2 bg-emerald-100 text-emerald-600 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">مهارت‌های تخصصی</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-2 pt-2">
+        <!-- Skill items with dynamic gradients -->
+        <span class="px-4 py-2 bg-gradient-to-r from-medical-500/10 to-medical-600/10 hover:from-medical-500/20 hover:to-medical-600/20 text-medical-800 border border-medical-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">ارزیابی و مداخلات کاردرمانی</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 hover:from-cyan-500/20 hover:to-cyan-600/20 text-cyan-800 border border-cyan-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">پردازش حسی (Sensory Processing)</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-sky-500/10 to-sky-600/10 hover:from-sky-500/20 hover:to-sky-600/20 text-sky-800 border border-sky-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">Evidence-Based Practice</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-emerald-600/10 hover:from-emerald-500/20 hover:to-emerald-600/20 text-emerald-800 border border-emerald-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">پژوهش بالینی (Research)</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-indigo-600/10 hover:from-indigo-500/20 hover:to-indigo-600/20 text-indigo-800 border border-indigo-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">پروپوزال‌نویسی (Proposal Writing)</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-rose-500/10 to-rose-600/10 hover:from-rose-500/20 hover:to-rose-600/20 text-rose-800 border border-rose-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">ترجمه تخصصی پزشکی (Medical Translation)</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-slate-500/10 to-slate-600/10 hover:from-slate-500/20 hover:to-slate-600/20 text-slate-800 border border-slate-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">تحلیل آماری با SPSS</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-blue-600/10 hover:from-blue-500/20 hover:to-blue-600/20 text-blue-800 border border-blue-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">Microsoft Office</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-purple-600/10 hover:from-purple-500/20 hover:to-purple-600/20 text-purple-800 border border-purple-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">Adobe Photoshop</span>
+        <span class="px-4 py-2 bg-gradient-to-r from-teal-500/10 to-teal-600/10 hover:from-teal-500/20 hover:to-teal-600/20 text-teal-800 border border-teal-200 rounded-xl text-xs sm:text-sm font-bold transition duration-200 cursor-default">Adobe Illustrator</span>
+      </div>
+    </section>
+
+    <!-- SECTION 7: COURSES -->
+    <section id="courses" class="reveal glass-card rounded-2xl p-6 sm:p-8 shadow-lg border border-white/40 space-y-4">
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+        <div class="p-2 bg-teal-100 text-teal-600 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">دوره‌ها و گواهینامه‌ها</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+        <!-- Course Items -->
+        <div class="p-3.5 rounded-xl border border-slate-100 bg-white/60 shadow-sm flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-medical-500 shrink-0"></span>
+          <span class="text-sm font-bold text-slate-800">دوره سیر تا پیاز اتیسم</span>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-100 bg-white/60 shadow-sm flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 shrink-0"></span>
+          <span class="text-sm font-bold text-slate-800">دوره جامع کاردرمانی ذهن</span>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-100 bg-white/60 shadow-sm flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-teal-500 shrink-0"></span>
+          <span class="text-sm font-bold text-slate-800">دوره توانبخشی حافظه</span>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-100 bg-white/60 shadow-sm flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-500 shrink-0"></span>
+          <span class="text-sm font-bold text-slate-800">دوره توانبخشی توجه</span>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-100 bg-white/60 shadow-sm flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
+          <span class="text-sm font-bold text-slate-800">ارزیابی و درمان ادراک دیداری</span>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-100 bg-white/60 shadow-sm flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 shrink-0"></span>
+          <span class="text-sm font-bold text-slate-800">دوره علوم اعصاب شناختی</span>
+        </div>
+        <div class="p-3.5 rounded-xl border border-slate-100 bg-white/60 shadow-sm flex items-center gap-2.5 sm:col-span-2 md:col-span-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-purple-500 shrink-0"></span>
+          <span class="text-sm font-bold text-slate-800">دوره جامع کاردرمانی ذهنی و شناختی کودکان</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- PREMIUM FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-12 mt-16 border-t border-slate-800/80 no-print">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-right space-y-1">
+        <h4 class="text-lg font-bold text-white">فاطمه صابر</h4>
+        <p class="text-sm text-medical-400">کارشناس کاردرمانی | نظام پزشکی ک.د ۴۰۵۴</p>
+      </div>
+
+      <!-- Live and Interactive Stats or Info -->
+      <div class="text-center md:text-left text-xs text-slate-500 space-y-2">
+        <p>© ۱۴۰۵ تمامی حقوق برای فاطمه صابر محفوظ است.</p>
+        <p>طراحی شده با الهام از استانداردهای نوین رابط کاربری شیشه‌ای.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT FOR INTERACTIVE FEATURES & PDF DOWNLOAD -->
+  <script>
+    // 1. Scroll Reveal Animation using Intersection Observer
+    document.addEventListener("DOMContentLoaded", function() {
+      const reveals = document.querySelectorAll(".reveal");
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // Animates once
+          }
+        });
+      }, {
+        threshold: 0.1, // Trigger when 10% of element is visible
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      reveals.forEach(reveal => {
+        revealObserver.observe(reveal);
+      });
+      
+      // Make hero section instantly active
+      const hero = document.getElementById("hero");
+      if (hero) hero.classList.add("active");
+    });
+
+    // 2. High-Quality HTML2PDF.js Generator Implementation
+    function downloadPDF() {
+      const container = document.getElementById("resume-container");
+      
+      // Select interactive action elements we want to hide during print
+      const nav = document.querySelector("nav");
+      const footer = document.querySelector("footer");
+      
+      // Set options for high-resolution standard A4 layout
+      const opt = {
+        margin:       [10, 10, 10, 10], // Beautiful page margins
+        filename:     'Fatemeh_Saber_Resume.pdf',
+        image:        { type: 'jpeg', quality: 1.0 }, // Preserves images at max quality
+        html2canvas:  { 
+          scale: 3, // Ultra-high resolution rendering (scale: 3)
+          useCORS: true, 
+          letterRendering: true, 
+          scrollY: 0,
+          scrollX: 0
+        },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] } // Smart automatic page-breaks
+      };
+
+      // Apply print styling temporarily
+      container.classList.add("pdf-mode");
+      if (nav) nav.style.display = "none";
+      if (footer) footer.style.display = "none";
+
+      // Execute pdf conversion
+      html2pdf().set(opt).from(container).save().then(() => {
+        // Restore styling after output completion
+        container.classList.remove("pdf-mode");
+        if (nav) nav.style.display = "";
+        if (footer) footer.style.display = "";
+      }).catch(err => {
+        console.error("خطا در تولید فایل PDF:", err);
+        // Fallback for safety in case of errors
+        container.classList.remove("pdf-mode");
+        if (nav) nav.style.display = "";
+        if (footer) footer.style.display = "";
+      });
+    }
+  </script>
+</body>
+</html>
+
